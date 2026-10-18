@@ -37,7 +37,7 @@
   {
     "field_name": "Metrics",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "#1: Training batch step time (step_time_msec); #2: Training throughput (images_per_sec); #3: Achieved compute throughput (fp16_tflops); #4: Peak GPU memory (peak_gpu_memory_gb); #5: Modeled weight and feature-map traffic, GB/s (modeled_weight_feature_traffic_gb_s)"
+    "value": "#1: Training batch step time (step_time_msec); #2: Training throughput (images_per_sec); #3: Modeled FP16 training throughput, 3x forward FLOPs, TFLOP/s (fp16_tflops); #4: Peak GPU memory (peak_gpu_memory_gb); #5: Modeled weight and feature-map traffic, GB/s (modeled_weight_feature_traffic_gb_s)"
   },
   {
     "field_name": "Command Tools Executed",
@@ -157,7 +157,7 @@
   {
     "field_name": "Container Base Image",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "nvidia/cuda:12.8.1-cudnn-devel-ubuntu24.04"
+    "value": "Provider-supplied Ubuntu 24.04 container (CUDA 12.6 toolkit preinstalled); the generator does not build an image"
   },
   {
     "field_name": "Python Version",
@@ -167,7 +167,7 @@
   {
     "field_name": "GPU Runtime Version (was ROCm Version)",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "CUDA 12.8"
+    "value": "CUDA 12.6 (nvcc 12.6.85 preinstalled in the container; setup installs 12.8 only when nvcc is missing). Driver 580.159.04 reports CUDA 13.0"
   },
   {
     "field_name": "BLAS Version (was rocBLAS version)",
@@ -217,7 +217,7 @@
   {
     "field_name": "g++ Version",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "N/A - CMake not used"
+    "value": "N/A - g++ not used"
   },
   {
     "field_name": "Known Runtime Constraints (<=35 Words Each)",
@@ -362,7 +362,7 @@
   {
     "field_name": "Schema Last Updated",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "2026-09-05"
+    "value": "2026-10-17"
   },
   {
     "field_name": "Installation and Execution Summary",
@@ -377,7 +377,7 @@
   {
     "field_name": "ROCm Version",
     "source_file": "BenchmarkSpecDefinitions.xlsx::Workload_Definitions",
-    "value": "CUDA 12.8"
+    "value": "CUDA 12.6 (nvcc 12.6.85 preinstalled in the container; setup installs 12.8 only when nvcc is missing). Driver 580.159.04 reports CUDA 13.0"
   },
   {
     "field_name": "rocBLAS Version",
